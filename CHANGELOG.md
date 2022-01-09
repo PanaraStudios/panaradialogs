@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * Fixed Image not showing
+
+## 0.0.3
+
+* Fixed Image issue

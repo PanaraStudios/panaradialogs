@@ -38,9 +38,16 @@ class PanaraInfoDialog {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'lib/assets/info.png',
+                    'packages/panara_dialogs/assets/info.png',
                     width: 84,
                     height: 84,
+                    color: panaraDialogType == PanaraDialogType.normal
+                        ? normal
+                        : panaraDialogType == PanaraDialogType.success
+                            ? success
+                            : panaraDialogType == PanaraDialogType.warning
+                                ? warning
+                                : error,
                   ),
                   const SizedBox(
                     height: 24,
@@ -130,9 +137,16 @@ class PanaraConfirmDialog {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'lib/assets/confirm.png',
+                    'packages/panara_dialogs/assets/confirm.png',
                     width: 84,
                     height: 84,
+                    color: panaraDialogType == PanaraDialogType.normal
+                        ? normal
+                        : panaraDialogType == PanaraDialogType.success
+                            ? success
+                            : panaraDialogType == PanaraDialogType.warning
+                                ? warning
+                                : error,
                   ),
                   const SizedBox(
                     height: 24,
