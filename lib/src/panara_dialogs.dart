@@ -38,7 +38,7 @@ class PanaraInfoDialog {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/info.png',
+                    'lib/assets/info.png',
                     width: 84,
                     height: 84,
                   ),
@@ -130,7 +130,7 @@ class PanaraConfirmDialog {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/confirm.png',
+                    'lib/assets/confirm.png',
                     width: 84,
                     height: 84,
                   ),
