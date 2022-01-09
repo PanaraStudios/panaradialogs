@@ -31,7 +31,7 @@ Then you just have to import the package with
 
 ```dart
 
-	import 'package:panara_dialogs/panara_dialogs.dart';
+import 'package:panara_dialogs/panara_dialogs.dart';
 
 ```
 
