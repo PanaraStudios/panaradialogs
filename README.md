@@ -6,10 +6,12 @@ Panara Dialogs is a UI Kit for Dialog comes with 2 types of dialogs - Info Dialo
 
 ## Preview
 
-### PanaraInfoDialog - Images
+### PanaraInfoDialog
 
+![success](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/info_success.png)![normal](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/info_normal.png)![warning](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/info_warning.png)![error](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/info_error.png)
 
-### PanaraConfirmDialog - Images
+### PanaraConfirmDialog
+![success](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/confirm_success.png)![normal](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/confirm_normal.png)![warning](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/confirm_warning.png)![error](https://raw.githubusercontent.com/PanaraStudios/panaradialogs/master/preview_images/confirm_error.png)
 
   
 
@@ -18,9 +20,9 @@ Add the dependency in  `pubspec.yaml`:
 
 ```yaml
 
-	dependencies:
-	  panara_dialogs: ^0.0.1
-	  
+dependencies:
+    panara_dialogs: ^0.0.1
+
 ```
 
 ## Usage
@@ -37,17 +39,17 @@ Then you just have to import the package with
 Here is how you can use `PanaraInfoDialog` in your flutter project.
 ```dart
 
-	PanaraInfoDialog.show(
-		context, 
-		title: "Hello",
-		message: "This is the PanaraInfoDialog",
-		buttonText: "Okay",
-		onTapDismiss: () {
-			Navigator.pop(context);
-		}
-		panaraDialogType: PanaraDialogType.normal,
-		barrierDismissible: false, // optional parameter (default is true)
-	);
+PanaraInfoDialog.show(
+    context, 
+    title: "Hello",
+    message: "This is the PanaraInfoDialog",
+    buttonText: "Okay",
+    onTapDismiss: () {
+        Navigator.pop(context);
+    }
+    panaraDialogType: PanaraDialogType.normal,
+    barrierDismissible: false, // optional parameter (default is true)
+);
 
 ```
 
@@ -64,21 +66,21 @@ Here is how you can use `PanaraInfoDialog` in your flutter project.
 And Here is how you can use `PanaraConfirmDialog` in your flutter project.
 ```dart
 
-	PanaraConfirmDialog.show(
-		context, 
-		title: "Hello",
-		message: "This is the PanaraConfirmDialog",
-		confirmButtonText: "Confirm",
-		cancelButtonText: "Cancel",
-		onTapCancel: () {
-			Navigator.pop(context);
-		}
-		onTapConfirm: () {
-			Navigator.pop(context);
-		}
-		panaraDialogType: PanaraDialogType.normal,
-		barrierDismissible: false, // optional parameter (default is true)
-	);
+PanaraConfirmDialog.show(
+    context, 
+    title: "Hello",
+    message: "This is the PanaraConfirmDialog",
+    confirmButtonText: "Confirm",
+    cancelButtonText: "Cancel",
+    onTapCancel: () {
+        Navigator.pop(context);
+    }
+    onTapConfirm: () {
+        Navigator.pop(context);
+    }
+    panaraDialogType: PanaraDialogType.normal,
+    barrierDismissible: false, // optional parameter (default is true)
+);
 
 ```
 
