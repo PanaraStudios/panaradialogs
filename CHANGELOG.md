@@ -13,3 +13,7 @@
 ## 0.0.4
 
 * Added 6 Different animations for both type of dialogs
+
+## 0.0.5
+
+* Optimization & performance fixes

@@ -1,7 +1,7 @@
 # Panara Dialogs
 ![Pub Version](https://img.shields.io/pub/v/panara_dialogs?style=plastic) ![GitHub](https://img.shields.io/github/license/PanaraStudios/panaradialogs?style=plastic) 
 
-Panara Dialogs is a UI Kit for Dialog comes with 2 types of dialogs - Info Dialog & Confirmation Dialog both comes with 4 different variants as shown in below screenshots.
+Panara Dialogs is a UI Kit for Dialog comes with 2 types of dialogs - Info Dialog & Confirmation Dialog both comes with 4 different variants as shown in below screenshots. with 6 different animations.
 
 
 ## Preview
@@ -21,7 +21,7 @@ Add the dependency in  `pubspec.yaml`:
 ```yaml
 
 dependencies:
-    panara_dialogs: ^0.0.4
+    panara_dialogs: ^0.0.5
 
 ```
 
