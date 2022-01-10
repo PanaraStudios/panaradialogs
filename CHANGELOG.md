@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Fixed Image issue
+
+## 0.0.4
+
+* Added 6 Different animations for both type of dialogs

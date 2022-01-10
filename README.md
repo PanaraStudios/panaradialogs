@@ -21,7 +21,7 @@ Add the dependency in  `pubspec.yaml`:
 ```yaml
 
 dependencies:
-    panara_dialogs: ^0.0.1
+    panara_dialogs: ^0.0.4
 
 ```
 
@@ -94,6 +94,17 @@ PanaraConfirmDialog.show(
 | onTapConfirm | `void Function()` | function to decide what will happen onTap confirm |
 | onTapCancel | `void Function()` | function to decide what will happen onTap cancel |
 | panaraDialogType | `PanaraDialogType` | `success`, `normal`, `warning`, `error`  |
+
+
+### Animations for Both Dialogs
+| method | Animation |
+|--|--|
+| `showAnimatedFromLeft()` | slide animation from left |
+| `showAnimatedFromRight()` | slide animation from right |
+| `showAnimatedFromTop()` | slide animation from top |
+| `showAnimatedFromBottom()` | slide animation from bottom |
+| `showAnimatedGrow()` | grow animation from center |
+| `showAnimatedShrink()` | shrink animation from center |
 
   
 

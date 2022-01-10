@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraInfoDialog.show(
+                PanaraInfoDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Info Dialog Normal.",
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraInfoDialog.show(
+                PanaraInfoDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Info Dialog Warning.",
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraInfoDialog.show(
+                PanaraInfoDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Info Dialog Error.",
@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraConfirmDialog.show(
+                PanaraConfirmDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Confirm Dialog Success.",
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraConfirmDialog.show(
+                PanaraConfirmDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Confirm Dialog Normal.",
@@ -172,7 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraConfirmDialog.show(
+                PanaraConfirmDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Confirm Dialog Warning.",
@@ -194,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                PanaraConfirmDialog.show(
+                PanaraConfirmDialog.showAnimatedGrow(
                   context,
                   title: "Hello",
                   message: "This is the Panara Confirm Dialog Error.",
