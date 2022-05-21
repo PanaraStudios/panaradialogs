@@ -1,0 +1,117 @@
+import 'package:flutter/material.dart';
+import 'package:panara_dialogs/src/constants/colors.dart';
+import 'package:panara_dialogs/src/constants/panara_dialog_type.dart';
+import 'package:panara_dialogs/src/widgets/panara_button.dart';
+
+///
+/// This is the PanaraInfoDialogWidget.
+///
+class PanaraInfoDialogWidget extends StatelessWidget {
+  final String title;
+  final String message;
+  final String? imagePath;
+  final String buttonText;
+  final VoidCallback onTapDismiss;
+  final PanaraDialogType panaraDialogType;
+  final Color? color;
+  final Color? textColor;
+  final Color? buttonTextColor;
+  const PanaraInfoDialogWidget({
+    Key? key,
+    required this.title,
+    required this.message,
+    required this.buttonText,
+    required this.onTapDismiss,
+    required this.panaraDialogType,
+    this.textColor = const Color(0xFF707070),
+    this.color = const Color(0xFF179DFF),
+    this.buttonTextColor,
+    this.imagePath,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.center,
+      child: Material(
+        color: Colors.transparent,
+        child: Container(
+          constraints: const BoxConstraints(
+            maxWidth: 340,
+          ),
+          margin: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                imagePath ?? 'packages/panaradialogs/assets/info.png',
+                width: 84,
+                height: 84,
+                color: panaraDialogType == PanaraDialogType.normal
+                    ? normal
+                    : panaraDialogType == PanaraDialogType.success
+                        ? success
+                        : panaraDialogType == PanaraDialogType.warning
+                            ? warning
+                            : panaraDialogType == PanaraDialogType.error
+                                ? error
+                                : color,
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 24,
+                  height: 1.2,
+                  fontWeight: FontWeight.w600,
+                  color: textColor,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                message,
+                style: TextStyle(
+                  color: textColor,
+                  height: 1.5,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              PanaraButton(
+                buttonTextColor: buttonTextColor ?? Colors.white,
+                text: buttonText,
+                onTap: onTapDismiss,
+                bgColor: panaraDialogType == PanaraDialogType.normal
+                    ? normal
+                    : panaraDialogType == PanaraDialogType.success
+                        ? success
+                        : panaraDialogType == PanaraDialogType.warning
+                            ? warning
+                            : panaraDialogType == PanaraDialogType.error
+                                ? error
+                                : color ?? const Color(0xFF179DFF),
+                isOutlined: false,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

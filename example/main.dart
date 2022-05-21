@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
+import 'package:panara_dialogs/src/constants/panara_dialog_type.dart';
 
 void main() {
   runApp(const MyApp());

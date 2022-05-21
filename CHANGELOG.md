@@ -17,3 +17,11 @@
 ## 0.0.5
 
 * Optimization & performance fixes
+
+## 0.0.6
+
+* Add support for custom colors & image.
+* Fixed infinite width of dialogs.
+* Organized project structure.
+* Widgets can be used individually.
+* Animations can be used individually.

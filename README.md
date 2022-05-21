@@ -46,7 +46,7 @@ PanaraInfoDialog.show(
     buttonText: "Okay",
     onTapDismiss: () {
         Navigator.pop(context);
-    }
+    },
     panaraDialogType: PanaraDialogType.normal,
     barrierDismissible: false, // optional parameter (default is true)
 );
@@ -77,7 +77,7 @@ PanaraConfirmDialog.show(
     }
     onTapConfirm: () {
         Navigator.pop(context);
-    }
+    },
     panaraDialogType: PanaraDialogType.normal,
     barrierDismissible: false, // optional parameter (default is true)
 );
