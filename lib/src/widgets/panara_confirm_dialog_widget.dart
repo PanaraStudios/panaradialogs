@@ -58,15 +58,17 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                 imagePath ?? 'packages/panaradialogs/assets/confirm.png',
                 width: 84,
                 height: 84,
-                color: panaraDialogType == PanaraDialogType.normal
-                    ? normal
-                    : panaraDialogType == PanaraDialogType.success
-                        ? success
-                        : panaraDialogType == PanaraDialogType.warning
-                            ? warning
-                            : panaraDialogType == PanaraDialogType.error
-                                ? error
-                                : color,
+                color: imagePath != null
+                    ? null
+                    : (panaraDialogType == PanaraDialogType.normal
+                        ? normal
+                        : panaraDialogType == PanaraDialogType.success
+                            ? success
+                            : panaraDialogType == PanaraDialogType.warning
+                                ? warning
+                                : panaraDialogType == PanaraDialogType.error
+                                    ? error
+                                    : color),
               ),
               const SizedBox(
                 height: 24,

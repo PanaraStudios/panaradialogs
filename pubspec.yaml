@@ -1,6 +1,6 @@
 name: panara_dialogs
 description: PanaraDialogs is a Dialog UI Kit. A minimal but beautiful design for Flutter Dialogs.
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/PanaraStudios/panaradialogs
 
 environment:
