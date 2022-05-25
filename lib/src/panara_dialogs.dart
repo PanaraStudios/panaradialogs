@@ -20,17 +20,17 @@ import 'package:panara_dialogs/src/widgets/panara_info_dialog_widget.dart';
 /// 5. showAnimatedGrow
 /// 6. showAnimatedShrink
 ///
-/// Checkout online documentation for more information or example at https://pub.dev
+/// Checkout online documentation for more information or example at https://pub.dev/documentation/panara_dialogs/latest/
 ///
 class PanaraInfoDialog {
   ///
   /// This is PanaraInfoDialog without animation.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static show(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -60,11 +60,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with slide animation from left.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromLeft(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -100,11 +100,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with slide animation from right.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromRight(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -140,11 +140,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with slide animation from top.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromTop(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -180,11 +180,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with slide animation from bottom.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromBottom(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -220,11 +220,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with grow animation from center.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedGrow(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -260,11 +260,11 @@ class PanaraInfoDialog {
   ///
   /// This will show the PanaraInfoDialog with shrink animation from center.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedShrink(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String buttonText,
@@ -314,17 +314,17 @@ class PanaraInfoDialog {
 /// 5. showAnimatedGrow
 /// 6. showAnimatedShrink
 ///
-/// Checkout online documentation for more information or example at https://pub.dev
+/// Checkout online documentation for more information or example at https://pub.dev/documentation/panara_dialogs/latest/
 ///
 class PanaraConfirmDialog {
   ///
   /// This is PanaraConfirmDialog without animation.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static show(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -358,11 +358,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with slide animation from left.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromLeft(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -402,11 +402,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with slide animation from right.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromRight(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -446,11 +446,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with slide animation from top.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromTop(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -490,11 +490,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with slide animation from bottom.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedFromBottom(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -534,11 +534,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with grow animation from center.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedGrow(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,
@@ -578,11 +578,11 @@ class PanaraConfirmDialog {
   ///
   /// This will show the PanaraConfirmDialog with shrink animation from center.
   ///
-  /// for more information visit https://pub.dev
+  /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
   static showAnimatedShrink(
     BuildContext context, {
-    required String title,
+    String? title,
     required String message,
     String? imagePath,
     required String confirmButtonText,

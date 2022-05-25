@@ -25,3 +25,11 @@
 * Organized project structure.
 * Widgets can be used individually.
 * Animations can be used individually.
+
+## 0.0.7
+
+* Add support for custom colors & image.
+* Fixed infinite width of dialogs.
+* Organized Package file structure.
+* Widgets can be used individually.
+* Animations can be used individually.

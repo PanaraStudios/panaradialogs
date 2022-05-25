@@ -21,7 +21,7 @@ Add the dependency in  `pubspec.yaml`:
 ```yaml
 
 dependencies:
-    panara_dialogs: ^0.0.5
+    panara_dialogs: ^0.0.7
 
 ```
 

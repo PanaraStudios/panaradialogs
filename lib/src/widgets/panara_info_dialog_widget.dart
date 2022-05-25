@@ -7,7 +7,7 @@ import 'package:panara_dialogs/src/widgets/panara_button.dart';
 /// This is the PanaraInfoDialogWidget.
 ///
 class PanaraInfoDialogWidget extends StatelessWidget {
-  final String title;
+  final String? title;
   final String message;
   final String? imagePath;
   final String buttonText;
@@ -18,7 +18,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final Color? buttonTextColor;
   const PanaraInfoDialogWidget({
     Key? key,
-    required this.title,
+    this.title,
     required this.message,
     required this.buttonText,
     required this.onTapDismiss,
@@ -67,19 +67,21 @@ class PanaraInfoDialogWidget extends StatelessWidget {
               const SizedBox(
                 height: 24,
               ),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 24,
-                  height: 1.2,
-                  fontWeight: FontWeight.w600,
-                  color: textColor,
+              if (title != null)
+                Text(
+                  title ?? "",
+                  style: TextStyle(
+                    fontSize: 24,
+                    height: 1.2,
+                    fontWeight: FontWeight.w600,
+                    color: textColor,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
+              if (title != null)
+                const SizedBox(
+                  height: 5,
+                ),
               Text(
                 message,
                 style: TextStyle(
