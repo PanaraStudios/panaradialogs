@@ -41,3 +41,8 @@
 * Organized Package file structure.
 * Widgets can be used individually.
 * Animations can be used individually.
+
+## 0.0.9
+
+* Added Margin & Padding property.
+* Updated Documentation in Readme.

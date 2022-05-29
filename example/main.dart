@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
-import 'package:panara_dialogs/src/constants/panara_dialog_type.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 ///
-/// For more information read documentation at https://pub.dev
+/// For more information read documentation at https://pub.dev/documentation/panara_dialogs/latest/
 ///
 
 class MyApp extends StatelessWidget {

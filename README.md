@@ -21,7 +21,7 @@ Add the dependency in  `pubspec.yaml`:
 ```yaml
 
 dependencies:
-    panara_dialogs: ^0.0.8
+    panara_dialogs: ^0.0.9
 
 ```
 
@@ -56,11 +56,17 @@ PanaraInfoDialog.show(
 ### Properties of `PanaraInfoDialog`
 | Property | Type | value |
 |--|--|--|
+| imagePath | `String` | path to your local assets image  |
 | title | `String` | any string value  |
 | message | `String` | any string value  |
 | buttonText | `String` | any string value  |
 | onTapDismiss | `void Function()` | function to decide what will happen onTap  |
-| panaraDialogType | `PanaraDialogType` | `success`, `normal`, `warning`, `error`  |
+| panaraDialogType | `PanaraDialogType` | `success`, `normal`, `warning`, `error`, `custom`  |
+| color | `Color` | define your own color, by selecting ```panaraDialogType: PanaraDialogType.custom```  |
+| textColor | `Color` | define your own text color  |
+| buttonTextColor | `Color` | define your own button text color  |
+| margin | `EdgeInsets` | define margin  |
+| padding | `EdgeInsets` | define padding  |
 
 ---
 And Here is how you can use `PanaraConfirmDialog` in your flutter project.
@@ -74,7 +80,7 @@ PanaraConfirmDialog.show(
     cancelButtonText: "Cancel",
     onTapCancel: () {
         Navigator.pop(context);
-    }
+    },
     onTapConfirm: () {
         Navigator.pop(context);
     },
@@ -87,16 +93,24 @@ PanaraConfirmDialog.show(
 ### Properties of `PanaraConfirmDialog`
 | Property | Type | value |
 |--|--|--|
+| imagePath | `String` | path to your local assets image  |
 | title | `String` | any string value  |
 | message | `String` | any string value  |
 | confirmButtonText | `String` | any string value  |
 | cancelButtonText | `String` | any string value  |
 | onTapConfirm | `void Function()` | function to decide what will happen onTap confirm |
 | onTapCancel | `void Function()` | function to decide what will happen onTap cancel |
-| panaraDialogType | `PanaraDialogType` | `success`, `normal`, `warning`, `error`  |
+| panaraDialogType | `PanaraDialogType` | `success`, `normal`, `warning`, `error`, `custom`  |
+| color | `Color` | define your own color, by selecting ```panaraDialogType: PanaraDialogType.custom```  |
+| textColor | `Color` | define your own text color  |
+| buttonTextColor | `Color` | define your own button text color  |
+| margin | `EdgeInsets` | define margin  |
+| padding | `EdgeInsets` | define padding  |
 
 
 ### Animations for Both Dialogs
+This are static methods for both Dialog Class.
+
 | method | Animation |
 |--|--|
 | `showAnimatedFromLeft()` | slide animation from left |

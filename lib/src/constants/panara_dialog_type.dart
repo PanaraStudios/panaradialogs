@@ -1,6 +1,6 @@
 ///
 /// These are the 4 Variants for both Dialogs.
-/// Now you can add your custom color to it by choosing PanaraDialogType.custom
+/// Now you can add your custom color to it by choosing PanaraDialogType.custom and defining your own color.
 ///
 /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
 ///

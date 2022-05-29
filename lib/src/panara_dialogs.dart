@@ -39,6 +39,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showDialog(
@@ -54,6 +56,8 @@ class PanaraInfoDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -73,6 +77,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -81,7 +87,8 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromLeft(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromLeft(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -94,6 +101,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -113,6 +122,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -121,7 +132,8 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromRight(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromRight(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -134,6 +146,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -153,6 +167,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -161,7 +177,7 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromTop(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromTop(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -174,6 +190,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -193,6 +211,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -201,7 +221,8 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromBottom(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromBottom(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -214,6 +235,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -233,6 +256,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -241,7 +266,7 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.grow(animation, secondaryAnimation, child);
+          return PanaraAnimations.grow(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -254,6 +279,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -273,6 +300,8 @@ class PanaraInfoDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -281,7 +310,7 @@ class PanaraInfoDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.shrink(animation, secondaryAnimation, child);
+          return PanaraAnimations.shrink(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -294,6 +323,8 @@ class PanaraInfoDialog {
           color: color,
           textColor: textColor,
           buttonTextColor: buttonTextColor,
+          margin: margin,
+          padding: padding,
         ),
       );
 }
@@ -335,6 +366,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showDialog(
@@ -352,6 +385,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -373,6 +408,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -381,7 +418,8 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromLeft(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromLeft(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -396,6 +434,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -417,6 +457,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -425,7 +467,8 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromRight(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromRight(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -440,6 +483,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -461,6 +506,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -469,7 +516,7 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromTop(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromTop(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -484,6 +531,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -505,6 +554,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -513,7 +564,8 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.fromBottom(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromBottom(
+              animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -528,6 +580,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -549,6 +603,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -557,7 +613,7 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.grow(animation, secondaryAnimation, child);
+          return PanaraAnimations.grow(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -572,6 +628,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 
@@ -593,6 +651,8 @@ class PanaraConfirmDialog {
     Color? color,
     Color? textColor,
     Color? buttonTextColor,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
     bool barrierDismissible = true,
   }) =>
       showGeneralDialog(
@@ -601,7 +661,7 @@ class PanaraConfirmDialog {
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return Animations.shrink(animation, secondaryAnimation, child);
+          return PanaraAnimations.shrink(animation, secondaryAnimation, child);
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -616,6 +676,8 @@ class PanaraConfirmDialog {
           textColor: textColor,
           buttonTextColor: buttonTextColor,
           imagePath: imagePath,
+          margin: margin,
+          padding: padding,
         ),
       );
 }

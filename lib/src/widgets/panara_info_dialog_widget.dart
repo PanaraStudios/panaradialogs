@@ -4,7 +4,7 @@ import 'package:panara_dialogs/src/constants/panara_dialog_type.dart';
 import 'package:panara_dialogs/src/widgets/panara_button.dart';
 
 ///
-/// This is the PanaraInfoDialogWidget.
+/// PanaraInfoDialogWidget, you can use it separatly if you want.
 ///
 class PanaraInfoDialogWidget extends StatelessWidget {
   final String? title;
@@ -16,6 +16,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final Color? color;
   final Color? textColor;
   final Color? buttonTextColor;
+  final EdgeInsets? padding;
+  final EdgeInsets? margin;
   const PanaraInfoDialogWidget({
     Key? key,
     this.title,
@@ -27,6 +29,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     this.color = const Color(0xFF179DFF),
     this.buttonTextColor,
     this.imagePath,
+    this.padding = const EdgeInsets.all(24),
+    this.margin = const EdgeInsets.all(24),
   }) : super(key: key);
 
   @override
@@ -39,8 +43,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
           constraints: const BoxConstraints(
             maxWidth: 340,
           ),
-          margin: const EdgeInsets.all(24),
-          padding: const EdgeInsets.all(24),
+          margin: margin ?? const EdgeInsets.all(24),
+          padding: padding ?? const EdgeInsets.all(24),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),

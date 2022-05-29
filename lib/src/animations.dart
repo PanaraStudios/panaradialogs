@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 ///
 /// This is the animation class containing all the animations for both dialogs.
+/// you can use it separatly if you want to use them in your other widgets.
 ///
-class Animations {
+class PanaraAnimations {
   // slide animation from right to left
   // we need animation of type double
   static fromLeft(Animation<double> animation,

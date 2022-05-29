@@ -4,7 +4,7 @@ import 'package:panara_dialogs/src/constants/panara_dialog_type.dart';
 import 'package:panara_dialogs/src/widgets/panara_button.dart';
 
 ///
-/// This is the PanaraConfirmDialogWidget.
+/// PanaraConfirmDialogWidget, you can use it separatly if you want.
 ///
 class PanaraConfirmDialogWidget extends StatelessWidget {
   final String? title;
@@ -18,6 +18,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
   final Color? color;
   final Color? textColor;
   final Color? buttonTextColor;
+  final EdgeInsets? padding;
+  final EdgeInsets? margin;
   const PanaraConfirmDialogWidget({
     Key? key,
     this.title,
@@ -31,6 +33,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
     this.textColor = const Color(0xFF707070),
     this.buttonTextColor = Colors.white,
     this.imagePath,
+    this.padding = const EdgeInsets.all(24),
+    this.margin = const EdgeInsets.all(24),
   }) : super(key: key);
 
   @override
@@ -43,8 +47,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
           constraints: const BoxConstraints(
             maxWidth: 340,
           ),
-          margin: const EdgeInsets.all(24),
-          padding: const EdgeInsets.all(24),
+          margin: margin ?? const EdgeInsets.all(24),
+          padding: padding ?? const EdgeInsets.all(24),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
