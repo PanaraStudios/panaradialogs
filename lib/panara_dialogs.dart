@@ -1,17 +1,17 @@
 library panara_dialogs;
 
-/// Imports Both Dialogs
+/// exports Both Dialogs
 export 'src/panara_dialogs.dart';
 
-/// Imports PanaraDialogType
+/// exports PanaraDialogType
 export 'src/constants/panara_dialog_type.dart';
 
-/// Imports Dialog Widgets
+/// exports Dialog Widgets.
 export 'src/widgets/panara_info_dialog_widget.dart';
 export 'src/widgets/panara_confirm_dialog_widget.dart';
 
-/// Imports Dialog Animations
+/// exports Dialog Animations
 export 'src/animations.dart';
 
-/// Imports Colors used in build-in types.
+/// exports Colors used in build-in types.
 export 'src/constants/colors.dart';

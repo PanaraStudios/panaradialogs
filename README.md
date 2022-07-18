@@ -111,14 +111,14 @@ PanaraConfirmDialog.show(
 ### Animations for Both Dialogs
 This are static methods for both Dialog Class.
 
-| method | Animation |
+|method|Animation|
 |--|--|
-| `showAnimatedFromLeft()` | slide animation from left |
-| `showAnimatedFromRight()` | slide animation from right |
-| `showAnimatedFromTop()` | slide animation from top |
-| `showAnimatedFromBottom()` | slide animation from bottom |
-| `showAnimatedGrow()` | grow animation from center |
-| `showAnimatedShrink()` | shrink animation from center |
+|`showAnimatedFromLeft()`|slide animation from left|
+|`showAnimatedFromRight()`|slide animation from right|
+|`showAnimatedFromTop()`|slide animation from top|
+|`showAnimatedFromBottom()`|slide animation from bottom|
+|`showAnimatedGrow()`|grow animation from center|
+|`showAnimatedShrink()`|shrink animation from center|
 
   
 

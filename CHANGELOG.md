@@ -46,3 +46,12 @@
 
 * Added Margin & Padding property.
 * Updated Documentation in Readme.
+
+## 0.1.0
+
+* Updated Documentation in Readme.
+
+## 0.1.1
+
+* Updated Documentation in Readme.
+* Fixed built in image error.
