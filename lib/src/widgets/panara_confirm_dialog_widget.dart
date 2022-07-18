@@ -59,7 +59,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                imagePath ?? 'packages/panara_dialogs/assets/confirm.png',
+                imagePath ?? 'assets/confirm.png',
+                package: 'panara_dialogs',
                 width: 84,
                 height: 84,
                 color: imagePath != null

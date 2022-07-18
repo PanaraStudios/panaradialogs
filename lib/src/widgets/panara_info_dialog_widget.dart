@@ -55,7 +55,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                imagePath ?? 'packages/panara_dialogs/assets/info.png',
+                imagePath ?? 'assets/info.png',
+                package: 'panara_dialogs',
                 width: 84,
                 height: 84,
                 color: imagePath != null

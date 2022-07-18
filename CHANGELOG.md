@@ -55,3 +55,8 @@
 
 * Updated Documentation in Readme.
 * Fixed built in image error.
+
+## 0.1.2
+
+* Updated Documentation in Readme.
+* Fixed built in image error.

@@ -6,7 +6,7 @@ export 'src/panara_dialogs.dart';
 /// exports PanaraDialogType
 export 'src/constants/panara_dialog_type.dart';
 
-/// exports Dialog Widgets.
+/// exports Dialog Widgets. with builtin assets.
 export 'src/widgets/panara_info_dialog_widget.dart';
 export 'src/widgets/panara_confirm_dialog_widget.dart';
 
