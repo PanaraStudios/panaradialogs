@@ -1,5 +1,5 @@
 # Panara Dialogs
-![Pub Version](https://img.shields.io/pub/v/panara_dialogs?style=plastic) ![GitHub](https://img.shields.io/github/license/PanaraStudios/panaradialogs?style=plastic) 
+[![Pub Version](https://img.shields.io/pub/v/panara_dialogs?style=plastic)](https://pub.dev/packages/panara_dialogs) [![GitHub](https://img.shields.io/github/license/PanaraStudios/panaradialogs?style=plastic)](https://pub.dev/packages/panara_dialogs/license) 
 
 Panara Dialogs is a UI Kit for Dialog comes with 2 types of dialogs - Info Dialog & Confirmation Dialog both comes with 4 different variants as shown in below screenshots. with 6 different animations.
 
@@ -21,7 +21,7 @@ Add the dependency in  `pubspec.yaml`:
 ```yaml
 
 dependencies:
-    panara_dialogs: ^0.0.9
+    panara_dialogs: ^0.1.3
 
 ```
 
@@ -67,6 +67,7 @@ PanaraInfoDialog.show(
 | buttonTextColor | `Color` | define your own button text color  |
 | margin | `EdgeInsets` | define margin  |
 | padding | `EdgeInsets` | define padding  |
+| noImage | `bool` | If you don't want any image set it to `true`. it's `false` by default |
 
 ---
 And Here is how you can use `PanaraConfirmDialog` in your flutter project.
@@ -106,6 +107,7 @@ PanaraConfirmDialog.show(
 | buttonTextColor | `Color` | define your own button text color  |
 | margin | `EdgeInsets` | define margin  |
 | padding | `EdgeInsets` | define padding  |
+| noImage | `bool` | If you don't want any image set it to `true`. it's `false` by default |
 
 
 ### Animations for Both Dialogs
@@ -124,4 +126,4 @@ This are static methods for both Dialog Class.
 
 ## Feedback
 
-Please feel free to  [give me any feedback](https://github.com/PanaraStudios/panaradialogs/issues)  helping support this plugin !
+Please feel free to  [give me any feedback or file issue](https://github.com/PanaraStudios/panaradialogs/issues)  helping support this plugin !

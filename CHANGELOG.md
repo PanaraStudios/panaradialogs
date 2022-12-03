@@ -60,3 +60,7 @@
 
 * Updated Documentation in Readme.
 * Fixed built in image error.
+
+## 0.1.3
+
+* No Image Support Added

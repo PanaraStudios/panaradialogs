@@ -42,6 +42,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showDialog(
         barrierDismissible: barrierDismissible,
@@ -58,6 +59,7 @@ class PanaraInfoDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -80,6 +82,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -103,6 +106,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -125,6 +129,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -148,6 +153,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -170,6 +176,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -192,6 +199,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -214,6 +222,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -237,6 +246,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -259,6 +269,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -281,6 +292,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -303,6 +315,7 @@ class PanaraInfoDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -325,6 +338,7 @@ class PanaraInfoDialog {
           buttonTextColor: buttonTextColor,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 }
@@ -369,11 +383,13 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showDialog(
         barrierDismissible: barrierDismissible,
         context: context,
         builder: (context) => PanaraConfirmDialogWidget(
+          noImage: noImage,
           title: title,
           message: message,
           confirmButtonText: confirmButtonText,
@@ -411,6 +427,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -436,6 +453,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -460,6 +478,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -485,6 +504,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -509,6 +529,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -533,6 +554,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -557,6 +579,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -582,6 +605,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -606,6 +630,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -630,6 +655,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 
@@ -654,6 +680,7 @@ class PanaraConfirmDialog {
     EdgeInsets? margin,
     EdgeInsets? padding,
     bool barrierDismissible = true,
+    bool noImage = false,
   }) =>
       showGeneralDialog(
         barrierDismissible: barrierDismissible,
@@ -678,6 +705,7 @@ class PanaraConfirmDialog {
           imagePath: imagePath,
           margin: margin,
           padding: padding,
+          noImage: noImage,
         ),
       );
 }
