@@ -39,9 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SizedBox(
               height: 10,
@@ -214,6 +215,98 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text("Show Error Confirm"),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                PanaraConfirmDialog.showAnimatedGrow(
+                  context,
+                  title: "Hello",
+                  message: "This is the Panara Confirm Dialog Success.",
+                  confirmButtonText: "Confirm",
+                  cancelButtonText: "Cancel",
+                  onTapCancel: () {
+                    Navigator.pop(context);
+                  },
+                  onTapConfirm: () {
+                    Navigator.pop(context);
+                  },
+                  panaraDialogType: PanaraDialogType.success,
+                  noImage: true,
+                );
+              },
+              child: const Text("Show No Image Success Confirm"),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                PanaraConfirmDialog.showAnimatedGrow(
+                  context,
+                  title: "Hello",
+                  message: "This is the Panara Confirm Dialog Normal.",
+                  confirmButtonText: "Confirm",
+                  cancelButtonText: "Cancel",
+                  onTapCancel: () {
+                    Navigator.pop(context);
+                  },
+                  onTapConfirm: () {
+                    Navigator.pop(context);
+                  },
+                  panaraDialogType: PanaraDialogType.normal,
+                  noImage: true,
+                );
+              },
+              child: const Text("Show No Image Normal Confirm"),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                PanaraConfirmDialog.showAnimatedGrow(
+                  context,
+                  title: "Hello",
+                  message: "This is the Panara Confirm Dialog Warning.",
+                  confirmButtonText: "Confirm",
+                  cancelButtonText: "Cancel",
+                  onTapCancel: () {
+                    Navigator.pop(context);
+                  },
+                  onTapConfirm: () {
+                    Navigator.pop(context);
+                  },
+                  panaraDialogType: PanaraDialogType.warning,
+                  noImage: true,
+                );
+              },
+              child: const Text("Show No Image Warning Confirm"),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextButton(
+              onPressed: () {
+                PanaraConfirmDialog.showAnimatedGrow(
+                  context,
+                  title: "Hello",
+                  message: "This is the Panara Confirm Dialog Error.",
+                  confirmButtonText: "Confirm",
+                  cancelButtonText: "Cancel",
+                  onTapCancel: () {
+                    Navigator.pop(context);
+                  },
+                  onTapConfirm: () {
+                    Navigator.pop(context);
+                  },
+                  panaraDialogType: PanaraDialogType.error,
+                  noImage: true,
+                );
+              },
+              child: const Text("Show No Image Error Confirm"),
             ),
             const SizedBox(
               height: 10,
