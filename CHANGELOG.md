@@ -64,3 +64,8 @@
 ## 0.1.3
 
 * No Image Support Added
+
+## 0.1.4
+
+* No Image Support Added
+* Custom Image Support Error fixed

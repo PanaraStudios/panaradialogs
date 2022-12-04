@@ -20,7 +20,10 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
   final Color? buttonTextColor;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+
+  /// If you don't want any icon or image, you toggle it to true.
   final bool noImage;
+
   const PanaraConfirmDialogWidget({
     Key? key,
     this.title,
@@ -63,7 +66,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
               if (!noImage)
                 Image.asset(
                   imagePath ?? 'assets/confirm.png',
-                  package: 'panara_dialogs',
+                  package: imagePath != null ? null : 'panara_dialogs',
                   width: 84,
                   height: 84,
                   color: imagePath != null
