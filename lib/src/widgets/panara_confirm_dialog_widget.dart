@@ -10,6 +10,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
   final String? title;
   final String message;
   final String? imagePath;
+  final double? imageSize;
   final String confirmButtonText;
   final String cancelButtonText;
   final VoidCallback onTapConfirm;
@@ -37,6 +38,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
     this.textColor = const Color(0xFF707070),
     this.buttonTextColor = Colors.white,
     this.imagePath,
+    this.imageSize,
     this.padding = const EdgeInsets.all(24),
     this.margin = const EdgeInsets.all(24),
     required this.noImage,
@@ -67,8 +69,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                 Image.asset(
                   imagePath ?? 'assets/confirm.png',
                   package: imagePath != null ? null : 'panara_dialogs',
-                  width: 84,
-                  height: 84,
+                  width: imageSize ?? 84,
+                  height: imageSize ?? 84,
                   color: imagePath != null
                       ? null
                       : (panaraDialogType == PanaraDialogType.normal
@@ -81,10 +83,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                                       ? PanaraColors.error
                                       : color),
                 ),
-              if (!noImage)
-                const SizedBox(
-                  height: 24,
-                ),
+              if (!noImage) const SizedBox(height: 24),
               if (title != null)
                 Text(
                   title ?? "",
@@ -96,10 +95,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-              if (title != null)
-                const SizedBox(
-                  height: 5,
-                ),
+              if (title != null) const SizedBox(height: 5),
               Text(
                 message,
                 style: TextStyle(
@@ -110,9 +106,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -134,9 +128,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                       isOutlined: true,
                     ),
                   ),
-                  const SizedBox(
-                    width: 24,
-                  ),
+                  const SizedBox(width: 24),
                   Expanded(
                     flex: 1,
                     child: PanaraButton(
