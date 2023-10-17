@@ -69,3 +69,9 @@
 
 * No Image Support Added
 * Custom Image Support Error fixed
+
+## 0.1.5
+
+* dynamic to generic data type changed all dialogs 
+* dark theme support added
+* full example added

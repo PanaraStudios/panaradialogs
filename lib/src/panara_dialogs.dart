@@ -28,7 +28,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static show(
+  static Future<T?> show<T>(
     BuildContext context, {
     String? title,
     required String message,
@@ -44,7 +44,7 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showDialog(
+      showDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         builder: (context) => PanaraInfoDialogWidget(
@@ -68,7 +68,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromLeft(
+  static Future<T?> showAnimatedFromLeft<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -84,14 +84,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromLeft(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -115,7 +118,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromRight(
+  static Future<T?> showAnimatedFromRight<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -131,14 +134,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromRight(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -162,7 +168,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromTop(
+  static Future<T?> showAnimatedFromTop<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -178,13 +184,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.fromTop(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromTop(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -208,7 +218,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromBottom(
+  static Future<T?> showAnimatedFromBottom<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -224,14 +234,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromBottom(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -255,7 +268,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedGrow(
+  static Future<T?> showAnimatedGrow<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -271,13 +284,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.grow(animation, secondaryAnimation, child);
+          return PanaraAnimations.grow(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -301,7 +318,7 @@ class PanaraInfoDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedShrink(
+  static Future<T?> showAnimatedShrink<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -317,13 +334,17 @@ class PanaraInfoDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.shrink(animation, secondaryAnimation, child);
+          return PanaraAnimations.shrink(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraInfoDialogWidget(
@@ -367,7 +388,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static show(
+  static Future<T?> show<T>(
     BuildContext context, {
     String? title,
     required String message,
@@ -385,7 +406,7 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showDialog(
+      showDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         builder: (context) => PanaraConfirmDialogWidget(
@@ -411,7 +432,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromLeft(
+  static Future<T?> showAnimatedFromLeft<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -429,14 +450,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromLeft(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -462,7 +486,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromRight(
+  static Future<T?> showAnimatedFromRight<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -480,14 +504,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromRight(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -513,7 +540,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromTop(
+  static Future<T?> showAnimatedFromTop<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -531,13 +558,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.fromTop(animation, secondaryAnimation, child);
+          return PanaraAnimations.fromTop(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -563,7 +594,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedFromBottom(
+  static Future<T?> showAnimatedFromBottom<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -581,14 +612,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           return PanaraAnimations.fromBottom(
-              animation, secondaryAnimation, child);
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -614,7 +648,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedGrow(
+  static Future<T?> showAnimatedGrow<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -632,13 +666,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.grow(animation, secondaryAnimation, child);
+          return PanaraAnimations.grow(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(
@@ -664,7 +702,7 @@ class PanaraConfirmDialog {
   ///
   /// for more information visit https://pub.dev/documentation/panara_dialogs/latest/
   ///
-  static showAnimatedShrink(
+  static Future<T?> showAnimatedShrink<T extends Object?>(
     BuildContext context, {
     String? title,
     required String message,
@@ -682,13 +720,17 @@ class PanaraConfirmDialog {
     bool barrierDismissible = true,
     bool noImage = false,
   }) =>
-      showGeneralDialog(
+      showGeneralDialog<T>(
         barrierDismissible: barrierDismissible,
         context: context,
         barrierLabel: '',
         transitionDuration: const Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
-          return PanaraAnimations.shrink(animation, secondaryAnimation, child);
+          return PanaraAnimations.shrink(
+            animation,
+            secondaryAnimation,
+            child,
+          );
         },
         pageBuilder: (animation, secondaryAnimation, child) =>
             PanaraConfirmDialogWidget(

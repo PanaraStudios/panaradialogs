@@ -16,6 +16,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
   final VoidCallback onTapCancel;
   final PanaraDialogType panaraDialogType;
   final Color? color;
+  final Color? backgroundColor;
   final Color? textColor;
   final Color? buttonTextColor;
   final EdgeInsets? padding;
@@ -34,6 +35,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
     required this.onTapCancel,
     required this.panaraDialogType,
     this.color,
+    this.backgroundColor,
     this.textColor = const Color(0xFF707070),
     this.buttonTextColor = Colors.white,
     this.imagePath,
@@ -44,6 +46,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Align(
       alignment: Alignment.center,
       child: Material(
@@ -55,7 +58,7 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
           margin: margin ?? const EdgeInsets.all(24),
           padding: padding ?? const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: backgroundColor ?? theme.dialogBackgroundColor,
             borderRadius: BorderRadius.circular(15),
           ),
           child: Column(
