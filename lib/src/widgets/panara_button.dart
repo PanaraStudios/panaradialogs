@@ -22,8 +22,9 @@ class PanaraButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Material(
-      color: isOutlined ? Colors.white : bgColor,
+      color: isOutlined ? theme.buttonTheme.colorScheme?.background : bgColor,
       borderRadius: BorderRadius.circular(10),
       child: InkWell(
         onTap: onTap,

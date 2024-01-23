@@ -14,6 +14,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final VoidCallback onTapDismiss;
   final PanaraDialogType panaraDialogType;
   final Color? color;
+  final Color? backgroundColor;
   final Color? textColor;
   final Color? buttonTextColor;
   final EdgeInsets? padding;
@@ -30,6 +31,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     required this.panaraDialogType,
     this.textColor = const Color(0xFF707070),
     this.color = const Color(0xFF179DFF),
+    this.backgroundColor,
     this.buttonTextColor,
     this.imagePath,
     this.padding = const EdgeInsets.all(24),
@@ -39,6 +41,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return Align(
       alignment: Alignment.center,
       child: Material(
@@ -50,7 +53,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
           margin: margin ?? const EdgeInsets.all(24),
           padding: padding ?? const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: backgroundColor ?? theme.dialogBackgroundColor,
             borderRadius: BorderRadius.circular(15),
           ),
           child: Column(

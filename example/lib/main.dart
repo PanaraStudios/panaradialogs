@@ -9,17 +9,28 @@ void main() {
 /// For more information read documentation at https://pub.dev/documentation/panara_dialogs/latest/
 ///
 
+ValueNotifier<ThemeMode> _themeMode =
+    ValueNotifier<ThemeMode>(ThemeMode.system);
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Panara Dialogs Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ValueListenableBuilder(
+      valueListenable: _themeMode,
+      builder: (context, value, child) => MaterialApp(
+        title: 'Panara Dialogs Demo',
+        themeMode: value,
+        theme: ThemeData(
+          useMaterial3: true,
+          primarySwatch: Colors.blue,
+        ),
+        darkTheme: ThemeData.dark(
+          useMaterial3: true,
+        ),
+        home: const MyHomePage(title: 'Panara Dialogs Demo'),
       ),
-      home: const MyHomePage(title: 'Panara Dialogs Demo'),
     );
   }
 }
@@ -38,6 +49,29 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          ValueListenableBuilder(
+            valueListenable: _themeMode,
+            builder: (context, value, child) => IconButton(
+              onPressed: () {
+                if (value == ThemeMode.system) {
+                  _themeMode.value = ThemeMode.light;
+                } else if (value == ThemeMode.light) {
+                  _themeMode.value = ThemeMode.dark;
+                } else {
+                  _themeMode.value = ThemeMode.system;
+                }
+              },
+              icon: Icon(
+                value == ThemeMode.system
+                    ? Icons.brightness_auto
+                    : value == ThemeMode.light
+                        ? Icons.brightness_high
+                        : Icons.brightness_low,
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
