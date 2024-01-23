@@ -10,6 +10,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final String? title;
   final String message;
   final String? imagePath;
+  final double? imageSize;
   final String buttonText;
   final VoidCallback onTapDismiss;
   final PanaraDialogType panaraDialogType;
@@ -34,6 +35,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     this.backgroundColor,
     this.buttonTextColor,
     this.imagePath,
+    this.imageSize,
     this.padding = const EdgeInsets.all(24),
     this.margin = const EdgeInsets.all(24),
     required this.noImage,
@@ -65,8 +67,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                 Image.asset(
                   imagePath ?? 'assets/info.png',
                   package: imagePath != null ? null : 'panara_dialogs',
-                  width: 84,
-                  height: 84,
+                  width: imageSize ?? 84,
+                  height: imageSize ?? 84,
                   color: imagePath != null
                       ? null
                       : (panaraDialogType == PanaraDialogType.normal
@@ -79,10 +81,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                                       ? PanaraColors.error
                                       : color),
                 ),
-              if (!noImage)
-                const SizedBox(
-                  height: 24,
-                ),
+              if (!noImage) const SizedBox(height: 24),
               if (title != null)
                 Text(
                   title ?? "",
@@ -94,10 +93,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-              if (title != null)
-                const SizedBox(
-                  height: 5,
-                ),
+              if (title != null) const SizedBox(height: 5),
               Text(
                 message,
                 style: TextStyle(
@@ -108,9 +104,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               PanaraButton(
                 buttonTextColor: buttonTextColor ?? Colors.white,
                 text: buttonText,
