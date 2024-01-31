@@ -44,8 +44,9 @@ class PanaraInfoDialogWidget extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: Container(
-          constraints: const BoxConstraints(
-            maxWidth: 340,
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width*85,
+            minWidth: MediaQuery.of(context).size.width*85,
           ),
           margin: margin ?? const EdgeInsets.all(24),
           padding: padding ?? const EdgeInsets.all(24),
