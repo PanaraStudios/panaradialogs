@@ -10,7 +10,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final String? title;
   final String message;
   final String? imagePath;
-  final String buttonText;
+  final String? buttonText;
   final VoidCallback onTapDismiss;
   final PanaraDialogType panaraDialogType;
   final Color? color;
@@ -26,7 +26,7 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     Key? key,
     this.title,
     required this.message,
-    required this.buttonText,
+    this.buttonText,
     required this.onTapDismiss,
     required this.panaraDialogType,
     this.textColor = const Color(0xFF707070),
@@ -47,8 +47,9 @@ class PanaraInfoDialogWidget extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: Container(
-          constraints: const BoxConstraints(
-            maxWidth: 340,
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.of(context).size.width*85,
+            minWidth: MediaQuery.of(context).size.width*85,
           ),
           margin: margin ?? const EdgeInsets.all(24),
           padding: padding ?? const EdgeInsets.all(24),
@@ -111,9 +112,9 @@ class PanaraInfoDialogWidget extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              PanaraButton(
+              if(buttonText != null)PanaraButton(
                 buttonTextColor: buttonTextColor ?? Colors.white,
-                text: buttonText,
+                text: buttonText!,
                 onTap: onTapDismiss,
                 bgColor: panaraDialogType == PanaraDialogType.normal
                     ? PanaraColors.normal
