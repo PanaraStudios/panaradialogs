@@ -20,7 +20,11 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final EdgeInsets? padding;
   final EdgeInsets? margin;
   final TextStyle? titleTextStyle;
+  final int? titleMaxLines;
   final TextStyle? messageTextStyle;
+  final int? messageMaxLines;
+  final TextOverflow? titleTextOverFlow;
+  final TextOverflow? messageTextOverFlow;
 
   /// If you don't want any icon or image, you toggle it to true.
   final bool noImage;
@@ -40,6 +44,10 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     this.margin = const EdgeInsets.all(24),
     this.titleTextStyle,
     this.messageTextStyle,
+    this.titleMaxLines,
+    this.messageMaxLines,
+    this.titleTextOverFlow,
+    this.messageTextOverFlow,
     required this.noImage,
   }) : super(key: key);
 
@@ -98,6 +106,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                         color: textColor,
                       ),
                   textAlign: TextAlign.center,
+                  maxLines: titleMaxLines,
+                  overflow: titleTextOverFlow,
                 ),
               if (title != null)
                 const SizedBox(
@@ -113,6 +123,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                 textAlign: TextAlign.center,
+                maxLines: messageMaxLines,
+                overflow: messageTextOverFlow,
               ),
               const SizedBox(
                 height: 30,
