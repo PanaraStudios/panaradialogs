@@ -19,6 +19,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
   final Color? buttonTextColor;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+  final TextStyle? titleTextStyle;
+  final TextStyle? messageTextStyle;
 
   /// If you don't want any icon or image, you toggle it to true.
   final bool noImage;
@@ -36,6 +38,8 @@ class PanaraInfoDialogWidget extends StatelessWidget {
     this.imagePath,
     this.padding = const EdgeInsets.all(24),
     this.margin = const EdgeInsets.all(24),
+    this.titleTextStyle,
+    this.messageTextStyle,
     required this.noImage,
   }) : super(key: key);
 
@@ -86,12 +90,13 @@ class PanaraInfoDialogWidget extends StatelessWidget {
               if (title != null)
                 Text(
                   title ?? "",
-                  style: TextStyle(
-                    fontSize: 24,
-                    height: 1.2,
-                    fontWeight: FontWeight.w600,
-                    color: textColor,
-                  ),
+                  style: titleTextStyle ??
+                      TextStyle(
+                        fontSize: 24,
+                        height: 1.2,
+                        fontWeight: FontWeight.w600,
+                        color: textColor,
+                      ),
                   textAlign: TextAlign.center,
                 ),
               if (title != null)
@@ -100,12 +105,13 @@ class PanaraInfoDialogWidget extends StatelessWidget {
                 ),
               Text(
                 message,
-                style: TextStyle(
-                  color: textColor,
-                  height: 1.5,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: messageTextStyle ??
+                    TextStyle(
+                      color: textColor,
+                      height: 1.5,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
