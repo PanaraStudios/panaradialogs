@@ -18,6 +18,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
   final Color? color;
   final Color? backgroundColor;
   final Color? textColor;
+  final Color? cancleBtnBgColor;
+  final Color? confirmBtnBgColor;
   final Color? buttonTextColor;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
@@ -41,6 +43,8 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
     this.imagePath,
     this.padding = const EdgeInsets.all(24),
     this.margin = const EdgeInsets.all(24),
+    this.cancleBtnBgColor,
+    this.confirmBtnBgColor,
     required this.noImage,
   }) : super(key: key);
 
@@ -125,15 +129,17 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                     child: PanaraButton(
                       onTap: onTapCancel,
                       text: cancelButtonText,
-                      bgColor: panaraDialogType == PanaraDialogType.normal
-                          ? PanaraColors.normal
-                          : panaraDialogType == PanaraDialogType.success
-                              ? PanaraColors.success
-                              : panaraDialogType == PanaraDialogType.warning
-                                  ? PanaraColors.warning
-                                  : panaraDialogType == PanaraDialogType.error
-                                      ? PanaraColors.error
-                                      : color ?? const Color(0xFF179DFF),
+                      bgColor: cancleBtnBgColor ??
+                          (panaraDialogType == PanaraDialogType.normal
+                              ? PanaraColors.normal
+                              : panaraDialogType == PanaraDialogType.success
+                                  ? PanaraColors.success
+                                  : panaraDialogType == PanaraDialogType.warning
+                                      ? PanaraColors.warning
+                                      : panaraDialogType ==
+                                              PanaraDialogType.error
+                                          ? PanaraColors.error
+                                          : color ?? const Color(0xFF179DFF)),
                       isOutlined: true,
                     ),
                   ),
@@ -146,15 +152,17 @@ class PanaraConfirmDialogWidget extends StatelessWidget {
                       buttonTextColor: buttonTextColor ?? Colors.white,
                       onTap: onTapConfirm,
                       text: confirmButtonText,
-                      bgColor: panaraDialogType == PanaraDialogType.normal
-                          ? PanaraColors.normal
-                          : panaraDialogType == PanaraDialogType.success
-                              ? PanaraColors.success
-                              : panaraDialogType == PanaraDialogType.warning
-                                  ? PanaraColors.warning
-                                  : panaraDialogType == PanaraDialogType.error
-                                      ? PanaraColors.error
-                                      : color ?? const Color(0xFF179DFF),
+                      bgColor: confirmBtnBgColor ??
+                          (panaraDialogType == PanaraDialogType.normal
+                              ? PanaraColors.normal
+                              : panaraDialogType == PanaraDialogType.success
+                                  ? PanaraColors.success
+                                  : panaraDialogType == PanaraDialogType.warning
+                                      ? PanaraColors.warning
+                                      : panaraDialogType ==
+                                              PanaraDialogType.error
+                                          ? PanaraColors.error
+                                          : color ?? const Color(0xFF179DFF)),
                       isOutlined: false,
                     ),
                   ),
