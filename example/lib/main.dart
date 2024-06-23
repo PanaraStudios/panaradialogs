@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<ThemeMode>(
       valueListenable: _themeMode,
       builder: (context, value, child) => MaterialApp(
         title: 'Panara Dialogs Demo',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// All the Colors used in the Dialog themes
 class PanaraColors {
-  /// All the Colors used in the Dialog themes
   /// <h3>Hex Code: #61D800</h3>
   static Color success = const Color(0xFF61D800);
 

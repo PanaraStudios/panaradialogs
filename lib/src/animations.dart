@@ -107,4 +107,25 @@ class PanaraAnimations {
       child: child,
     );
   }
+
+  // slide animation with fade effect
+  static FadeTransition fade(
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    return FadeTransition(
+      opacity: Tween<double>(end: 1.0, begin: 0.0).animate(
+        CurvedAnimation(
+          parent: animation,
+          curve: const Interval(
+            0.00,
+            1.00,
+            curve: Curves.linear,
+          ),
+        ),
+      ),
+      child: child,
+    );
+  }
 }
